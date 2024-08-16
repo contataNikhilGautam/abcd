@@ -34,7 +34,11 @@ const App = () => {
   const handlePrev = () => {
     setItemList((prevItems) => [prevItems[prevItems.length - 1], ...prevItems.slice(0, -1)]);
   };
-
+  
+  const handleMoreClick = (background: string) => {
+    window.open(background, "_blank");
+  };
+  
   return (
     <div className="container">
       <div className="slide">
@@ -43,7 +47,7 @@ const App = () => {
             <div className="content">
               <h2 className="name">{item.name}</h2>
               <p className="desc">{item.desc}</p>
-              <button>More</button>
+              <button onClick={() => handleMoreClick(item.background)}>More</button>
             </div>
           </div>
         ))}
