@@ -47,7 +47,7 @@ const App = () => {
             <div className="content">
               <h2 className="name">{item.name}</h2>
               <p className="desc">{item.desc}</p>
-              <button onClick={() => handleMoreClick(item.background)}>More</button>
+              <button onClick={() => handleMoreClick(item.background)}>Open Image</button>
             </div>
           </div>
         ))}
